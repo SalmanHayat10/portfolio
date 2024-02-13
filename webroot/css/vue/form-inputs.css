@@ -1,0 +1,321 @@
+.a-form.input-text {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border-radius: .3em;
+    border: 1px solid #cecece;
+    box-sizing: border-box;
+    background-color: transparent;
+    font-size: .9em;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    padding: .75em;
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin: 0;
+}
+.a-form.input-text:focus {
+    outline: 0;
+    border: 1px solid #007bff;
+}
+
+.a-form.input-text.validation-error {
+    border: 1px solid #960505;
+}
+
+/* Input - File Upload  */
+.a-form.input-upload-area {
+    width: 100%;
+    position: relative;
+    padding: 2em 0;
+    display: block;
+}
+.a-form.input-upload-area[has-files] {
+    padding: 0;
+}
+.a-form.input-upload-area[has-files] .input-file {
+    display: none;
+}
+.a-form.input-file {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+.a-form.second-input-file {
+    cursor: pointer;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+.a-form.input-upload-area-mask {
+    border-radius: .4em;
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: 2px dashed #a8a8a8;
+    color: #a8a8a8;
+    font-size: 32px;
+    z-index: 2;
+}
+.a-form.input-upload-area-mask.active {
+    border-color: #007bff;
+    color: #007bff;
+}
+.a-form .image-list {
+    list-style: none;
+    margin: 0;
+    padding: .75rem;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+.a-form .selected-file-name {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.a-form .file-remove {
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 2em;
+    background-color: #a8a8a8;
+    -webkit-mask-size: .6em;
+    color: #fff;
+    mask-size: .6em;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    cursor: pointer;
+    transition: transform .25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.a-form .file-remove:hover {
+    transition-delay: .2s;
+    transform: scale(1.5);
+}
+.a-form .image-preview {
+    width: 3em;
+    height: 3em;
+    flex: 0 0 3em;
+    object-fit: contain;
+    box-sizing: border-box;
+    background-color: transparent;
+    box-shadow: 0 0 0 1px #efefef;
+    transition: transform .25s,box-shadow .25s,background-color .25s;
+    z-index: 99999;
+}
+.a-form .scale-preview-image:hover {
+    transition-delay: .2s;
+    transform: scale(3);
+    background-color: #fff;
+    box-shadow: 0 0 2px 0 rgb(0 0 0 / 10%);
+}
+/* \ File Upload Ends here */
+
+/* Group Container */
+.a-form .group-container-repeatable {
+    margin: 0em;
+    
+    border-top: 1px solid #efefef;
+    border-left: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+
+    border-radius: 5px 5px 0px 0px;
+}
+.a-form .group-item-repeatable {
+    padding: 1em 2em 1em 1em;
+    border-bottom: 1px solid #efefef;
+    position: relative;
+}
+.a-form .group-item-add {
+    border-left: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    border-radius: 0px 0px 5px 5px;
+    padding: 1em;
+}
+.a-form .group-item-remove {
+    position: absolute;
+    display: block;
+    top: calc(50% + .35em);
+    width: 1.3em;
+    height: 1.3em;
+    background-color: #cecece;
+    right: .35em;
+    border-radius: 1.3em;
+    cursor: pointer;
+    transition: background-color .2s;
+    overflow: hidden;
+    text-indent: -1000px;
+}
+.a-form .group-item-remove::before, .group-item-remove::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - .1em);
+    left: .325em;
+    display: block;
+    width: .65em;
+    height: .2em;
+    background-color: #fff;
+    transform-origin: center center;
+    transition: transform .25s;
+}
+.group-item-remove:hover {
+    background-color: #dc2c2c;
+}
+.group-item-remove:hover:before {
+    height: .2em;
+    width: .75em;
+    left: .25em;
+    top: calc(50% - .075em);
+}
+.group-item-remove:hover:before {
+    transform: rotate(-45deg);
+}
+.group-item-remove:hover:after {
+    transform: rotate(45deg);
+}
+/* \ Group Container Ends here */
+
+/* Type Select Starts here */
+.a-form.input-select-container::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-color: #cecece transparent transparent;
+    border-style: solid;
+    border-width: .4em .3em 0;
+    top: 70%;
+    margin-top: -.1em;
+    right: 1.7em;
+    position: absolute;
+}
+.a-form .input-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    background-color: transparent;
+    border-radius: .3em;
+    border: 1px solid #cecece;
+    font-size: .9em;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin: 0;
+    padding: .75em 2em .75em .75em;
+}
+.a-form .input-select:focus {
+    outline: 0;
+    border: 1px solid #007bff;
+}
+.a-form .input-select option:disabled {
+    color: #a8a8a8;
+}
+.a-form .input-select[data-placeholder-selected] {
+    color: #a8a8a8;
+}
+/* \ Ends here */
+
+
+/* Type Checkbox Starts here */
+.a-form .input-box-label-after {
+    margin-left: .5em;
+}
+.a-form .input-box-label-before {
+    margin-right: .5em;
+}
+.a-form .a-form-input .input-checkbox {
+    position: absolute;
+    left: -999px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.a-form .a-form-input .input-checkbox:checked~.a-form-input-decorator {
+    border-color: #007bff;
+}
+.a-form .a-form-input .a-form-input-decorator {
+    display: block;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: .25em;
+    border: 1px solid #cecece;
+    position: relative;
+    margin-top: 3.5px;
+}
+.a-form .a-form-input .input-checkbox:checked~.a-form-input-decorator:before {
+    background-color: #007bff;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M8.76,56.2c-6.38-6.34,3.26-16,9.64-9.69L38,65.88,80.56,23.29c6.38-6.38,16.07,3.32,9.69,9.69L42.84,80.37a6.83,6.83,0,0,1-9.65,0Z"/></svg>');
+}
+.a-form .a-form-input .a-form-input-decorator:before {
+    content: "";
+    display: block;
+    background-size: contain;
+    background-position: 100%;
+    width: calc(100% - .125em);
+    height: calc(100% - .125em);
+    box-sizing: border-box;
+    position: absolute;
+    top: .0625em;
+    left: .0725em;
+}
+/* \ Checkbox Ends here */
+
+/* Radio Button */
+.a-form .a-form-input .a-form-input-decorator.input-radio {
+    border-radius: 50px;
+}
+.a-form .a-form-input .input-checkbox:checked ~ .a-form-input-decorator.input-radio {
+    background-color: #007bff;
+    border: 5px solid #cecece;
+}
+/* \ Radio Ends here */
+
+/* MultiSelect */
+.a-form .multi-select {
+    box-shadow: none;
+}
+/* \ Multiselect Ends here */
+/* Input Error (validation) */
+.a-form.input-error {
+    color: #960505;
+    font-size: .8em;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: .25em;
+}
+
+/* Text Selection */
+.a-form.input-text::selection {
+    background: #007bff;
+    color: #fff;
+}

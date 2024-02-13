@@ -1,0 +1,8 @@
+.btn-outline-primary-no-hover:hover {
+    background-color: white!important;
+    color: #387bfe!important;
+}
+
+.avatar-thumbnail {
+    height: 50px!important;
+}

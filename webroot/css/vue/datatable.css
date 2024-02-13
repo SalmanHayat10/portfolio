@@ -1,0 +1,117 @@
+.data-table .selected-row {
+    background-color: rgb(1 123 255 / 15%);
+}
+.data-table .footer-records-info {
+    color: #818ea3;
+    font-size: 13px;
+}
+.data-table .footer-pagination {
+    justify-content: flex-end;
+}
+.data-table .bg-color {
+    background-color: #007bff;
+    color: #fff;
+}
+.data-table .table-row:hover {
+    background-color: rgb(1 123 255 / 15%);
+}
+.data-table .front-box-container {
+    display: flex;
+    justify-content: space-around;
+}
+.data-table th .expand-btn {
+    background-color: transparent;
+}
+.data-table .expand-btn {
+    border-radius: 20px;
+    font-size: 14px;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f3f5;
+}
+.data-table .expand-btn:hover {
+    background-color: #e5e5e5;
+}
+
+/* Pagination */
+.data-table .page-item.active .page-link {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+/* Loading Spinner */
+.loading-spinner {
+    margin: 0px auto;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+}
+  
+.loading-spinner > div{
+    background-color: #007bff;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.loading-spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.loading-spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+.loading-spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.loading-spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { 
+        -webkit-transform: scaleY(0.4) 
+    }  
+    20% { 
+        -webkit-transform: scaleY(1.0) 
+    }
+}
+
+@keyframes sk-stretchdelay {
+    0%, 40%, 100% { 
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }  20% { 
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+    }
+}
+/* \ End of Loading Spinner */
+
+
+/* Mobile devices */
+@media (max-width: 576px) {
+    .data-table .footer-records-info {
+        justify-content: center;
+    }
+    .data-table .footer-pagination {
+        justify-content: center;
+        padding-top: 5px;
+    }
+    .data-table td {
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,9 @@
+.sidebar-main-item {
+    border-top: 1px solid #e1e5eb;
+    border-bottom: 1px solid #e1e5eb;
+    margin: 0;
+    text-transform: uppercase;
+    color: #9ea8b9;
+    font-size: small;
+    padding-left: 30px;
+}
